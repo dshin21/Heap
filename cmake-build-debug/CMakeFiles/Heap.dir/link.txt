@@ -1,0 +1,1 @@
+/usr/bin/c++.exe -g  -Wl,--enable-auto-import CMakeFiles/Heap.dir/main.cpp.o  -o Heap.exe -Wl,--out-implib,libHeap.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
