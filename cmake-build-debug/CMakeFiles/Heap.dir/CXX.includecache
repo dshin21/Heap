@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/cygdrive/c/Users/Daniel Shin/Desktop/Heap/heap.hpp
+iostream
+-
+vector
+-
+iterator
+-
+
+/cygdrive/c/Users/Daniel Shin/Desktop/Heap/main.cpp
+iostream
+-
+heap.hpp
+/cygdrive/c/Users/Daniel Shin/Desktop/Heap/heap.hpp
+
