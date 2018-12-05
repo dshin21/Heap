@@ -15,6 +15,13 @@ class heap {
 private:
     vector<T> my_heap;
 
+    explicit heap(V stl_sequence) {
+        copy(stl_sequence.begin(),
+             stl_sequence.end(),
+             back_inserter(my_heap));
+        heapify();
+    }
+
     void heapify() {
         bool done = true;
         while (done) {
@@ -29,11 +36,10 @@ private:
     }
 
 public:
-    explicit heap(V stl_sequence) {
-        copy(stl_sequence.begin(),
-             stl_sequence.end(),
-             back_inserter(my_heap));
-        heapify();
+
+    static heap &get_instance(V stl_sequence) {
+        static heap instance(stl_sequence);
+        return instance;
     }
 
     ~heap() {
@@ -67,6 +73,14 @@ public:
              ostream_iterator<T>(os, " "));
         return os;
     }
+
+    void clear_heap() {
+        my_heap.clear();
+    }
+
+    heap(heap const &) = default;
+
+    void operator=(heap const &) = delete;
 };
 
 #endif //HEAP_HEAP_HPP
