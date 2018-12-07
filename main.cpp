@@ -3,6 +3,9 @@
 
 using namespace std;
 
+/*
+ * Used the Singleton Design Pattern
+ */
 int main() {
     vector<int> temp{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
     heap<int, vector<int>> singleton_heap = heap<int, vector<int>>::get_instance(temp);
